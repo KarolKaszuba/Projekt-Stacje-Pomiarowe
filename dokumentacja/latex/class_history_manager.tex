@@ -1,0 +1,261 @@
+\doxysection{History\+Manager Class Reference}
+\hypertarget{class_history_manager}{}\label{class_history_manager}\index{HistoryManager@{HistoryManager}}
+
+
+Klasa zarządzająca historią sesji aplikacji.  
+
+
+
+
+{\ttfamily \#include $<$historymanager.\+h$>$}
+
+Inheritance diagram for History\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_history_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_history_manager_a52180b21ae82d3b522c6902a2bc2a346}{History\+Manager}} (const QString \&storage\+Path, QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_history_manager}{History\+Manager}. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_history_manager_a4c900e25bd10486c922abeeaf327b03f}{generate\+Session\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Generuje unikalny identyfikator sesji. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_history_manager_af09d0bce07d5048368bc8f6312bee09d}{add\+Session}} (const QString \&session\+Id, const QString \&location, double radius, double latitude, double longitude, const QVariant\+List \&stations)
+\begin{DoxyCompactList}\small\item\em Dodaje nową sesję do historii. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_history_manager_a1d3b220f13307979f954e4923b6dfa4d}{add\+Session\+Sensors}} (const QString \&session\+Id, const QList$<$ QVariant\+Map $>$ \&sensors)
+\begin{DoxyCompactList}\small\item\em Dodaje sensory do istniejącej sesji, unikając duplikatów. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_history_manager_a3b42a3f8e413e5cb23cae64f344618db}{add\+Session\+Measurements}} (const QString \&session\+Id, const QList$<$ QVariant\+Map $>$ \&measurements)
+\begin{DoxyCompactList}\small\item\em Dodaje pomiary do sensorów w istniejącej sesji. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_history_manager_a0eb7135c4efa87ae16f547be5ab11b27}{add\+Session\+Air\+Quality}} (const QString \&session\+Id, const QVariant\+Map \&air\+Quality\+Data)
+\begin{DoxyCompactList}\small\item\em Dodaje dane o jakości powietrza do sesji. \end{DoxyCompactList}\item 
+QVariant\+List \mbox{\hyperlink{class_history_manager_a3c33067b27bbb35f7d35ffbb1f3c2c20}{load\+Sessions}} () const
+\begin{DoxyCompactList}\small\item\em Wczytuje listę zapisanych sesji. \end{DoxyCompactList}\item 
+QVariant\+Map \mbox{\hyperlink{class_history_manager_a60fb9b78b5fe15ea03d0cc75b6c31556}{load\+Session\+Details}} (const QString \&session\+Id) const
+\begin{DoxyCompactList}\small\item\em Wczytuje szczegóły konkretnej sesji. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_history_manager_abb4fedc76e945a93a54b1b1cd45c6bca}\label{class_history_manager_abb4fedc76e945a93a54b1b1cd45c6bca} 
+QDir {\bfseries m\+\_\+history\+Dir}
+\begin{DoxyCompactList}\small\item\em Katalog przechowujący pliki historii. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa zarządzająca historią sesji aplikacji. 
+
+Klasa \doxylink{class_history_manager}{History\+Manager} odpowiada za zapisywanie, wczytywanie i aktualizowanie danych sesji, takich jak informacje o stacjach pomiarowych, sensorach, pomiarach i jakości powietrza. Dane są przechowywane w plikach JSON w określonym katalogu. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_history_manager_a52180b21ae82d3b522c6902a2bc2a346}\index{HistoryManager@{HistoryManager}!HistoryManager@{HistoryManager}}
+\index{HistoryManager@{HistoryManager}!HistoryManager@{HistoryManager}}
+\doxysubsubsection{\texorpdfstring{HistoryManager()}{HistoryManager()}}
+{\footnotesize\ttfamily \label{class_history_manager_a52180b21ae82d3b522c6902a2bc2a346} 
+History\+Manager\+::\+History\+Manager (\begin{DoxyParamCaption}\item[{const QString \&}]{storage\+Path}{, }\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Konstruktor klasy \doxylink{class_history_manager}{History\+Manager}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em storage\+Path} & Ścieżka do katalogu, w którym przechowywane są dane historii. \\
+\hline
+{\em parent} & Wskaźnik na obiekt nadrzędny (domyślnie nullptr).\\
+\hline
+\end{DoxyParams}
+Inicjalizuje obiekt \doxylink{class_history_manager}{History\+Manager}, ustawia ścieżkę katalogu historii i zapewnia jego istnienie.
+
+
+\begin{DoxyParams}{Parameters}
+{\em storage\+Path} & Ścieżka do katalogu przechowywania danych historii. \\
+\hline
+{\em parent} & Wskaźnik na obiekt nadrzędny. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_history_manager_af09d0bce07d5048368bc8f6312bee09d}\index{HistoryManager@{HistoryManager}!addSession@{addSession}}
+\index{addSession@{addSession}!HistoryManager@{HistoryManager}}
+\doxysubsubsection{\texorpdfstring{addSession()}{addSession()}}
+{\footnotesize\ttfamily \label{class_history_manager_af09d0bce07d5048368bc8f6312bee09d} 
+void History\+Manager\+::add\+Session (\begin{DoxyParamCaption}\item[{const QString \&}]{session\+Id}{, }\item[{const QString \&}]{location}{, }\item[{double}]{radius}{, }\item[{double}]{latitude}{, }\item[{double}]{longitude}{, }\item[{const QVariant\+List \&}]{stations}{}\end{DoxyParamCaption})}
+
+
+
+Dodaje nową sesję do historii. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em session\+Id} & Unikalny identyfikator sesji. \\
+\hline
+{\em location} & Nazwa lokalizacji (np. miasto lub adres). \\
+\hline
+{\em radius} & Promień wyszukiwania w kilometrach. \\
+\hline
+{\em latitude} & Szerokość geograficzna lokalizacji. \\
+\hline
+{\em longitude} & Długość geograficzna lokalizacji. \\
+\hline
+{\em stations} & Lista stacji pomiarowych jako QVariant\+List.\\
+\hline
+\end{DoxyParams}
+Tworzy plik JSON dla sesji i aktualizuje plik indeksu. Sesja zawiera dane takie jak identyfikator, lokalizacja, współrzędne, promień i lista stacji.
+
+
+\begin{DoxyParams}{Parameters}
+{\em session\+Id} & Unikalny identyfikator sesji. \\
+\hline
+{\em location} & Nazwa lokalizacji. \\
+\hline
+{\em radius} & Promień wyszukiwania w kilometrach. \\
+\hline
+{\em latitude} & Szerokość geograficzna. \\
+\hline
+{\em longitude} & Długość geograficzna. \\
+\hline
+{\em stations} & Lista stacji jako QVariant\+List. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_history_manager_a0eb7135c4efa87ae16f547be5ab11b27}\index{HistoryManager@{HistoryManager}!addSessionAirQuality@{addSessionAirQuality}}
+\index{addSessionAirQuality@{addSessionAirQuality}!HistoryManager@{HistoryManager}}
+\doxysubsubsection{\texorpdfstring{addSessionAirQuality()}{addSessionAirQuality()}}
+{\footnotesize\ttfamily \label{class_history_manager_a0eb7135c4efa87ae16f547be5ab11b27} 
+void History\+Manager\+::add\+Session\+Air\+Quality (\begin{DoxyParamCaption}\item[{const QString \&}]{session\+Id}{, }\item[{const QVariant\+Map \&}]{air\+Quality\+Data}{}\end{DoxyParamCaption})}
+
+
+
+Dodaje dane o jakości powietrza do sesji. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em session\+Id} & Identyfikator sesji. \\
+\hline
+{\em air\+Quality\+Data} & Dane o jakości powietrza jako QVariant\+Map.\\
+\hline
+\end{DoxyParams}
+Wczytuje dane sesji, dodaje informacje o jakości powietrza i zapisuje zaktualizowane dane.
+
+
+\begin{DoxyParams}{Parameters}
+{\em session\+Id} & Identyfikator sesji. \\
+\hline
+{\em air\+Quality\+Data} & Dane o jakości powietrza jako QVariant\+Map. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_history_manager_a3b42a3f8e413e5cb23cae64f344618db}\index{HistoryManager@{HistoryManager}!addSessionMeasurements@{addSessionMeasurements}}
+\index{addSessionMeasurements@{addSessionMeasurements}!HistoryManager@{HistoryManager}}
+\doxysubsubsection{\texorpdfstring{addSessionMeasurements()}{addSessionMeasurements()}}
+{\footnotesize\ttfamily \label{class_history_manager_a3b42a3f8e413e5cb23cae64f344618db} 
+void History\+Manager\+::add\+Session\+Measurements (\begin{DoxyParamCaption}\item[{const QString \&}]{session\+Id}{, }\item[{const QList$<$ QVariant\+Map $>$ \&}]{measurements}{}\end{DoxyParamCaption})}
+
+
+
+Dodaje pomiary do sensorów w istniejącej sesji. 
+
+Dodaje pomiary do sensorów w sesji.
+
+
+\begin{DoxyParams}{Parameters}
+{\em session\+Id} & Identyfikator sesji. \\
+\hline
+{\em measurements} & Lista pomiarów jako QList$<$\+QVariant\+Map$>$.\\
+\hline
+\end{DoxyParams}
+Wczytuje dane sesji, organizuje pomiary według identyfikatorów sensorów i aktualizuje dane sesji.
+
+
+\begin{DoxyParams}{Parameters}
+{\em session\+Id} & Identyfikator sesji. \\
+\hline
+{\em measurements} & Lista pomiarów jako QList$<$\+QVariant\+Map$>$. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_history_manager_a1d3b220f13307979f954e4923b6dfa4d}\index{HistoryManager@{HistoryManager}!addSessionSensors@{addSessionSensors}}
+\index{addSessionSensors@{addSessionSensors}!HistoryManager@{HistoryManager}}
+\doxysubsubsection{\texorpdfstring{addSessionSensors()}{addSessionSensors()}}
+{\footnotesize\ttfamily \label{class_history_manager_a1d3b220f13307979f954e4923b6dfa4d} 
+void History\+Manager\+::add\+Session\+Sensors (\begin{DoxyParamCaption}\item[{const QString \&}]{session\+Id}{, }\item[{const QList$<$ QVariant\+Map $>$ \&}]{sensors}{}\end{DoxyParamCaption})}
+
+
+
+Dodaje sensory do istniejącej sesji, unikając duplikatów. 
+
+Dodaje sensory do istniejącej sesji.
+
+
+\begin{DoxyParams}{Parameters}
+{\em session\+Id} & Identyfikator sesji. \\
+\hline
+{\em sensors} & Lista sensorów jako QList$<$\+QVariant\+Map$>$.\\
+\hline
+\end{DoxyParams}
+Wczytuje istniejące dane sesji, dodaje nowe sensory (unikając duplikatów) i zapisuje zaktualizowane dane.
+
+
+\begin{DoxyParams}{Parameters}
+{\em session\+Id} & Identyfikator sesji. \\
+\hline
+{\em sensors} & Lista sensorów jako QList$<$\+QVariant\+Map$>$. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_history_manager_a4c900e25bd10486c922abeeaf327b03f}\index{HistoryManager@{HistoryManager}!generateSessionId@{generateSessionId}}
+\index{generateSessionId@{generateSessionId}!HistoryManager@{HistoryManager}}
+\doxysubsubsection{\texorpdfstring{generateSessionId()}{generateSessionId()}}
+{\footnotesize\ttfamily \label{class_history_manager_a4c900e25bd10486c922abeeaf327b03f} 
+QString History\+Manager\+::generate\+Session\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Generuje unikalny identyfikator sesji. 
+
+\begin{DoxyReturn}{Returns}
+QString zawierający UUID sesji bez nawiasów.
+
+QString zawierający UUID bez nawiasów. 
+\end{DoxyReturn}
+\Hypertarget{class_history_manager_a60fb9b78b5fe15ea03d0cc75b6c31556}\index{HistoryManager@{HistoryManager}!loadSessionDetails@{loadSessionDetails}}
+\index{loadSessionDetails@{loadSessionDetails}!HistoryManager@{HistoryManager}}
+\doxysubsubsection{\texorpdfstring{loadSessionDetails()}{loadSessionDetails()}}
+{\footnotesize\ttfamily \label{class_history_manager_a60fb9b78b5fe15ea03d0cc75b6c31556} 
+QVariant\+Map History\+Manager\+::load\+Session\+Details (\begin{DoxyParamCaption}\item[{const QString \&}]{session\+Id}{}\end{DoxyParamCaption}) const}
+
+
+
+Wczytuje szczegóły konkretnej sesji. 
+
+Wczytuje szczegóły sesji z pliku sesji.
+
+
+\begin{DoxyParams}{Parameters}
+{\em session\+Id} & Identyfikator sesji. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QVariant\+Map zawierający szczegóły sesji. 
+\end{DoxyReturn}
+\Hypertarget{class_history_manager_a3c33067b27bbb35f7d35ffbb1f3c2c20}\index{HistoryManager@{HistoryManager}!loadSessions@{loadSessions}}
+\index{loadSessions@{loadSessions}!HistoryManager@{HistoryManager}}
+\doxysubsubsection{\texorpdfstring{loadSessions()}{loadSessions()}}
+{\footnotesize\ttfamily \label{class_history_manager_a3c33067b27bbb35f7d35ffbb1f3c2c20} 
+QVariant\+List History\+Manager\+::load\+Sessions (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Wczytuje listę zapisanych sesji. 
+
+Wczytuje listę sesji z pliku indeksu.
+
+\begin{DoxyReturn}{Returns}
+QVariant\+List zawierający dane sesji.
+
+QVariant\+List zawierający listę sesji. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/\+Karol/\+Desktop/studia/sem4/\+JPO\+\_\+\+Projekt/2/\+JPO\+\_\+projekt\+\_\+2/historymanager.\+h\item 
+/\+Users/\+Karol/\+Desktop/studia/sem4/\+JPO\+\_\+\+Projekt/2/\+JPO\+\_\+projekt\+\_\+2/historymanager.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,82 @@
+\doxysection{window\+\_\+2\+\_\+data\+\_\+vis Class Reference}
+\hypertarget{classwindow__2__data__vis}{}\label{classwindow__2__data__vis}\index{window\_2\_data\_vis@{window\_2\_data\_vis}}
+
+
+Okno do wizualizacji danych pomiarowych ze stacji.  
+
+
+
+
+{\ttfamily \#include $<$window\+\_\+2\+\_\+data\+\_\+vis.\+h$>$}
+
+Inheritance diagram for window\+\_\+2\+\_\+data\+\_\+vis\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classwindow__2__data__vis}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classwindow__2__data__vis_a52c1dee106bbd397ae02cc75bdf66d7c}{window\+\_\+2\+\_\+data\+\_\+vis}} (int station\+Id, \mbox{\hyperlink{class_history_manager}{History\+Manager}} \texorpdfstring{$\ast$}{*}history\+Manager, const QString \&session\+Id, QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{classwindow__2__data__vis}{window\+\_\+2\+\_\+data\+\_\+vis}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classwindow__2__data__vis_acf1be7fed0a4e0e3b413be539447ffbb}{\texorpdfstring{$\sim$}{\string~}window\+\_\+2\+\_\+data\+\_\+vis}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor klasy \doxylink{classwindow__2__data__vis}{window\+\_\+2\+\_\+data\+\_\+vis}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Okno do wizualizacji danych pomiarowych ze stacji. 
+
+Klasa zarządza wyświetlaniem danych z sensorów, wykresów i informacji o jakości powietrza dla wybranej stacji pomiarowej. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classwindow__2__data__vis_a52c1dee106bbd397ae02cc75bdf66d7c}\index{window\_2\_data\_vis@{window\_2\_data\_vis}!window\_2\_data\_vis@{window\_2\_data\_vis}}
+\index{window\_2\_data\_vis@{window\_2\_data\_vis}!window\_2\_data\_vis@{window\_2\_data\_vis}}
+\doxysubsubsection{\texorpdfstring{window\_2\_data\_vis()}{window\_2\_data\_vis()}}
+{\footnotesize\ttfamily \label{classwindow__2__data__vis_a52c1dee106bbd397ae02cc75bdf66d7c} 
+window\+\_\+2\+\_\+data\+\_\+vis\+::window\+\_\+2\+\_\+data\+\_\+vis (\begin{DoxyParamCaption}\item[{int}]{station\+Id}{, }\item[{\mbox{\hyperlink{class_history_manager}{History\+Manager}} \texorpdfstring{$\ast$}{*}}]{history\+Manager}{, }\item[{const QString \&}]{session\+Id}{, }\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Konstruktor klasy \doxylink{classwindow__2__data__vis}{window\+\_\+2\+\_\+data\+\_\+vis}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em station\+Id} & Identyfikator stacji pomiarowej. \\
+\hline
+{\em history\+Manager} & Wskaźnik na menedżera historii. \\
+\hline
+{\em session\+Id} & Identyfikator sesji. \\
+\hline
+{\em parent} & Wskaźnik na widget nadrzędny (domyślnie nullptr).\\
+\hline
+\end{DoxyParams}
+Inicjalizuje okno wizualizacji danych, ustawia interfejs użytkownika, menedżera sieciowego oraz konfiguruje połączenia sygnałów i slotów. Pobiera dane sensorów i jakości powietrza dla podanej stacji.
+
+
+\begin{DoxyParams}{Parameters}
+{\em station\+Id} & Identyfikator stacji pomiarowej. \\
+\hline
+{\em history\+Manager} & Wskaźnik na menedżera historii sesji. \\
+\hline
+{\em session\+Id} & Identyfikator sesji. \\
+\hline
+{\em parent} & Wskaźnik na widget nadrzędny (domyślnie nullptr). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classwindow__2__data__vis_acf1be7fed0a4e0e3b413be539447ffbb}\index{window\_2\_data\_vis@{window\_2\_data\_vis}!````~window\_2\_data\_vis@{\texorpdfstring{$\sim$}{\string~}window\_2\_data\_vis}}
+\index{````~window\_2\_data\_vis@{\texorpdfstring{$\sim$}{\string~}window\_2\_data\_vis}!window\_2\_data\_vis@{window\_2\_data\_vis}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}window\_2\_data\_vis()}{\string~window\_2\_data\_vis()}}
+{\footnotesize\ttfamily \label{classwindow__2__data__vis_acf1be7fed0a4e0e3b413be539447ffbb} 
+window\+\_\+2\+\_\+data\+\_\+vis\+::\texorpdfstring{$\sim$}{\string~}window\+\_\+2\+\_\+data\+\_\+vis (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destruktor klasy \doxylink{classwindow__2__data__vis}{window\+\_\+2\+\_\+data\+\_\+vis}. 
+
+Zwalnia zasoby, takie jak interfejs użytkownika i menedżer sieciowy. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/\+Karol/\+Desktop/studia/sem4/\+JPO\+\_\+\+Projekt/2/\+JPO\+\_\+projekt\+\_\+2/window\+\_\+2\+\_\+data\+\_\+vis.\+h\item 
+/\+Users/\+Karol/\+Desktop/studia/sem4/\+JPO\+\_\+\+Projekt/2/\+JPO\+\_\+projekt\+\_\+2/\mbox{\hyperlink{window__2__data__vis_8cpp}{window\+\_\+2\+\_\+data\+\_\+vis.\+cpp}}\end{DoxyCompactItemize}

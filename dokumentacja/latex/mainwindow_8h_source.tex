@@ -1,0 +1,78 @@
+\doxysection{/\+Users/\+Karol/\+Desktop/studia/sem4/\+JPO\+\_\+\+Projekt/2/\+JPO\+\_\+projekt\+\_\+2/mainwindow.h}
+\hypertarget{mainwindow_8h_source}{}\label{mainwindow_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MAINWINDOW\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MAINWINDOW\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QNetworkAccessManager>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QNetworkReply>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QListWidgetItem>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QStandardPaths>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}historymanager.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }Ui\ \{\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui_1_1_main_window}{MainWindow}};\ \}}
+\DoxyCodeLine{00013\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow}}\ :\ \textcolor{keyword}{public}\ QMainWindow}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{\string~MainWindow}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ onSearchButtonClicked();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ onNetworkReply(QNetworkReply\ *reply);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ onGeocodeReply(QNetworkReply\ *reply);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ onStationItemClicked(QListWidgetItem\ *item);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ onHistoryButtonClicked();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{bool}\ checkInternetConnection();}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ fetchStations();}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ getLocationCoordinates(\textcolor{keyword}{const}\ QString\ \&location);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ updateStationList();}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{double}\ calculateDistance(\textcolor{keywordtype}{double}\ lat1,\ \textcolor{keywordtype}{double}\ lon1,\ \textcolor{keywordtype}{double}\ lat2,\ \textcolor{keywordtype}{double}\ lon2);}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00103\ \ \ \ \ \mbox{\hyperlink{class_ui_1_1_main_window}{Ui::MainWindow}}\ *ui;}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00108\ \ \ \ \ QNetworkAccessManager\ *m\_networkManager;}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00113\ \ \ \ \ QVariantList\ m\_stations;}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00118\ \ \ \ \ QString\ m\_status;}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00123\ \ \ \ \ QString\ m\_inputLocation;}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00128\ \ \ \ \ QString\ m\_stationName;}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{double}\ m\_locationLat;}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{double}\ m\_locationLon;}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{double}\ m\_searchRadius;}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_waitingForGeocode;}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00153\ \ \ \ \ QVariantList\ m\_allStations;}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00158\ \ \ \ \ \mbox{\hyperlink{class_history_manager}{HistoryManager}}\ *m\_historyManager;}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00163\ \ \ \ \ QString\ m\_currentSessionId;}
+\DoxyCodeLine{00164\ \};}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MAINWINDOW\_H}}
+
+\end{DoxyCode}

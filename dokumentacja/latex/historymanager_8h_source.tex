@@ -1,0 +1,46 @@
+\doxysection{/\+Users/\+Karol/\+Desktop/studia/sem4/\+JPO\+\_\+\+Projekt/2/\+JPO\+\_\+projekt\+\_\+2/historymanager.h}
+\hypertarget{historymanager_8h_source}{}\label{historymanager_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HISTORYMANAGER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HISTORYMANAGER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QDir>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QVariantList>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QVariantMap>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_history_manager_a52180b21ae82d3b522c6902a2bc2a346}{HistoryManager}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_history_manager_a52180b21ae82d3b522c6902a2bc2a346}{HistoryManager}}(\textcolor{keyword}{const}\ QString\ \&storagePath,\ QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00032\ \ \ \ \ QString\ \mbox{\hyperlink{class_history_manager_a4c900e25bd10486c922abeeaf327b03f}{generateSessionId}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_history_manager_af09d0bce07d5048368bc8f6312bee09d}{addSession}}(\textcolor{keyword}{const}\ QString\ \&sessionId,\ \textcolor{keyword}{const}\ QString\ \&location,\ \textcolor{keywordtype}{double}\ radius,\ \textcolor{keywordtype}{double}\ latitude,\ \textcolor{keywordtype}{double}\ longitude,\ \textcolor{keyword}{const}\ QVariantList\ \&stations);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_history_manager_a1d3b220f13307979f954e4923b6dfa4d}{addSessionSensors}}(\textcolor{keyword}{const}\ QString\ \&sessionId,\ \textcolor{keyword}{const}\ QList<QVariantMap>\ \&sensors);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_history_manager_a3b42a3f8e413e5cb23cae64f344618db}{addSessionMeasurements}}(\textcolor{keyword}{const}\ QString\ \&sessionId,\ \textcolor{keyword}{const}\ QList<QVariantMap>\ \&measurements);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_history_manager_a0eb7135c4efa87ae16f547be5ab11b27}{addSessionAirQuality}}(\textcolor{keyword}{const}\ QString\ \&sessionId,\ \textcolor{keyword}{const}\ QVariantMap\ \&airQualityData);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00070\ \ \ \ \ QVariantList\ \mbox{\hyperlink{class_history_manager_a3c33067b27bbb35f7d35ffbb1f3c2c20}{loadSessions}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00077\ \ \ \ \ QVariantMap\ \mbox{\hyperlink{class_history_manager_a60fb9b78b5fe15ea03d0cc75b6c31556}{loadSessionDetails}}(\textcolor{keyword}{const}\ QString\ \&sessionId)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00082\ \ \ \ \ QDir\ \mbox{\hyperlink{class_history_manager_abb4fedc76e945a93a54b1b1cd45c6bca}{m\_historyDir}};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ ensureHistoryDir();}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ updateIndexFile(\textcolor{keyword}{const}\ QVariantMap\ \&session);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00101\ \ \ \ \ QString\ m\_indexFilePath;}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ MAX\_SESSIONS\ =\ 100;}
+\DoxyCodeLine{00107\ \};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ HISTORYMANAGER\_H}}
+
+\end{DoxyCode}

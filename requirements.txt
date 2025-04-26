@@ -1,0 +1,54 @@
+Wymagania systemowe i zależności
+===============================
+
+Wymagania systemowe
+------------------
+- System operacyjny: Windows, macOS lub Linux
+- Procesor: 500 MHz CPU, 1 GHz preferowane
+- Pamięć RAM: 256 MB
+- Połączenie internetowe: Wymagane do pobierania danych z API GIOŚ i Nominatim (opcjonalne w trybie offline)
+
+Zależności oprogramowania
+-------------------------
+- **Qt**: Wersja 5.12 lub nowsza (zalecana 5.15)
+  - Moduły: core gui widgets network charts
+  - Narzędzia: Qt Creator (do edycji i kompilacji projektu)
+- **Kompilator C++**: Obsługujący standard C++17
+  - Windows: MinGW
+  - Linux: GCC 7 lub nowszy
+  - macOS: Clang (dołączony do Xcode)
+- **Biblioteki systemowe**:
+  - OpenSSL (dla bezpiecznych połączeń HTTPS)
+  - Standardowa biblioteka C++ (libstdc++ na Linux, MSVCRT na Windows)
+
+Zależności projektu
+-------------------
+- Brak zewnętrznych bibliotek poza Qt (wszystkie zależności są obsługiwane przez Qt)
+
+Instrukcja instalacji zależności
+--------------------------------
+1. **Qt**:
+   - Pobierz i zainstaluj Qt z oficjalnej strony (https://www.qt.io/download).
+   - Wybierz wersję open-source lub komercyjną.
+   - Zainstaluj moduły: core, gui, widgets, network, charts
+   - Skonfiguruj Qt Creator z wybranym kompilatorem.
+2. **Kompilator**:
+   - Windows: Zainstaluj MinGW
+   - Linux: Zainstaluj GCC 
+   - macOS: Zainstaluj Xcode z App Store.
+3. **OpenSSL** (jeśli nie jest dołączony do Qt):
+   - Windows: Zainstaluj OpenSSL (np. za pomocą vcpkg lub ręcznie).
+   - Linux: Zainstaluj libssl-dev
+   - macOS: Zazwyczaj dołączony do systemu.
+
+Konfiguracja projektu
+---------------------
+- Otwórz plik `JPO_projekt_2.pro` w Qt Creator.
+- Skonfiguruj zestaw kompilacji (kit), wybierając odpowiednią wersję Qt i kompilator.
+- Upewnij się, że ścieżki do bibliotek Qt są poprawnie ustawione w Qt Creator.
+
+Uwagi
+-----
+- Projekt został przetestowany na Qt 6.8.3. z kompilatorem Clang 15 na macOS Sequoia 15.1
+- W przypadku problemów z połączeniem HTTPS upewnij się, że OpenSSL jest poprawnie zainstalowany.
+- Tryb offline nie wymaga połączenia internetowego, ale ogranicza się do danych zapisanych w historii.

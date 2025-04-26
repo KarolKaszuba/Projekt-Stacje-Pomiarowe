@@ -1,0 +1,154 @@
+\doxysection{ui\+\_\+mainwindow.\+h}
+\hypertarget{ui__mainwindow_8h_source}{}\label{ui__mainwindow_8h_source}\index{/Users/Karol/Desktop/studia/sem4/JPO\_Projekt/2/JPO\_projekt\_2/build/Qt\_6\_9\_0\_dla\_macos-\/Debug/ui\_mainwindow.h@{/Users/Karol/Desktop/studia/sem4/JPO\_Projekt/2/JPO\_projekt\_2/build/Qt\_6\_9\_0\_dla\_macos-\/Debug/ui\_mainwindow.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ Form\ generated\ from\ reading\ UI\ file\ 'mainwindow.ui'}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ Created\ by:\ Qt\ User\ Interface\ Compiler\ version\ 6.9.0}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**}}
+\DoxyCodeLine{00006\ \textcolor{comment}{**\ WARNING!\ All\ changes\ made\ in\ this\ file\ will\ be\ lost\ when\ recompiling\ UI\ file!}}
+\DoxyCodeLine{00007\ \textcolor{comment}{********************************************************************************/}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ UI\_MAINWINDOW\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ UI\_MAINWINDOW\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QtCore/QVariant>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QtWidgets/QApplication>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QtWidgets/QGridLayout>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QtWidgets/QLabel>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QtWidgets/QLineEdit>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <QtWidgets/QListWidget>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <QtWidgets/QMainWindow>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <QtWidgets/QPushButton>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <QtWidgets/QWidget>}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui___main_window}{Ui\_MainWindow}}}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ QWidget\ *centralWidget;}
+\DoxyCodeLine{00028\ \ \ \ \ QGridLayout\ *gridLayout;}
+\DoxyCodeLine{00029\ \ \ \ \ QLabel\ *headerLabel;}
+\DoxyCodeLine{00030\ \ \ \ \ QLineEdit\ *lineEdit\_street\_town;}
+\DoxyCodeLine{00031\ \ \ \ \ QPushButton\ *pushButton\_szukaj;}
+\DoxyCodeLine{00032\ \ \ \ \ QListWidget\ *stationList;}
+\DoxyCodeLine{00033\ \ \ \ \ QLineEdit\ *lineEdit\_promien;}
+\DoxyCodeLine{00034\ \ \ \ \ QLabel\ *statusLabel;}
+\DoxyCodeLine{00035\ \ \ \ \ QPushButton\ *pushButton\_history;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ setupUi(QMainWindow\ *\mbox{\hyperlink{class_main_window}{MainWindow}})}
+\DoxyCodeLine{00038\ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_main_window}{MainWindow}}-\/>objectName().isEmpty())}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window}{MainWindow}}-\/>setObjectName(\textcolor{stringliteral}{"{}MainWindow"{}});}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window}{MainWindow}}-\/>resize(450,\ 600);}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ QSizePolicy\ sizePolicy(QSizePolicy::Policy::Fixed,\ QSizePolicy::Policy::Fixed);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ sizePolicy.setHorizontalStretch(0);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ sizePolicy.setVerticalStretch(0);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ sizePolicy.setHeightForWidth(\mbox{\hyperlink{class_main_window}{MainWindow}}-\/>sizePolicy().hasHeightForWidth());}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window}{MainWindow}}-\/>setSizePolicy(sizePolicy);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window}{MainWindow}}-\/>setMaximumSize(QSize(600,\ 1000));}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ centralWidget\ =\ \textcolor{keyword}{new}\ QWidget(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ centralWidget-\/>setObjectName(\textcolor{stringliteral}{"{}centralWidget"{}});}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ gridLayout\ =\ \textcolor{keyword}{new}\ QGridLayout(centralWidget);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ gridLayout-\/>setObjectName(\textcolor{stringliteral}{"{}gridLayout"{}});}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ gridLayout-\/>setContentsMargins(10,\ 10,\ 10,\ 10);}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ headerLabel\ =\ \textcolor{keyword}{new}\ QLabel(centralWidget);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ headerLabel-\/>setObjectName(\textcolor{stringliteral}{"{}headerLabel"{}});}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ QSizePolicy\ sizePolicy1(QSizePolicy::Policy::Preferred,\ QSizePolicy::Policy::Fixed);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ sizePolicy1.setHorizontalStretch(0);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ sizePolicy1.setVerticalStretch(0);}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ sizePolicy1.setHeightForWidth(headerLabel-\/>sizePolicy().hasHeightForWidth());}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ headerLabel-\/>setSizePolicy(sizePolicy1);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ headerLabel-\/>setMinimumSize(QSize(0,\ 50));}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ headerLabel-\/>setMaximumSize(QSize(10000,\ 10000));}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ QFont\ font;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ font.setPointSize(14);}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ font.setBold(\textcolor{keyword}{true});}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ headerLabel-\/>setFont(font);}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ headerLabel-\/>setStyleSheet(QString::fromUtf8(\textcolor{stringliteral}{"{}background-\/color:\ \#4CAF50;\ color:\ rgb(0,\ 0,\ 0);\ padding:\ 10px;\ border-\/radius:\ 5px;"{}}));}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ headerLabel-\/>setAlignment(Qt::AlignmentFlag::AlignCenter);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ gridLayout-\/>addWidget(headerLabel,\ 0,\ 0,\ 1,\ 2);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ lineEdit\_street\_town\ =\ \textcolor{keyword}{new}\ QLineEdit(centralWidget);}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ lineEdit\_street\_town-\/>setObjectName(\textcolor{stringliteral}{"{}lineEdit\_street\_town"{}});}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ lineEdit\_street\_town-\/>setAutoFillBackground(\textcolor{keyword}{false});}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ lineEdit\_street\_town-\/>setStyleSheet(QString::fromUtf8(\textcolor{stringliteral}{"{}border-\/radius:\ 5px;\ padding\ 5px;"{}}));}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ lineEdit\_street\_town-\/>setFrame(\textcolor{keyword}{true});}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ lineEdit\_street\_town-\/>setClearButtonEnabled(\textcolor{keyword}{true});}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ gridLayout-\/>addWidget(lineEdit\_street\_town,\ 1,\ 0,\ 1,\ 1);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ pushButton\_szukaj\ =\ \textcolor{keyword}{new}\ QPushButton(centralWidget);}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ pushButton\_szukaj-\/>setObjectName(\textcolor{stringliteral}{"{}pushButton\_szukaj"{}});}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ gridLayout-\/>addWidget(pushButton\_szukaj,\ 1,\ 1,\ 1,\ 1);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ stationList\ =\ \textcolor{keyword}{new}\ QListWidget(centralWidget);}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ stationList-\/>setObjectName(\textcolor{stringliteral}{"{}stationList"{}});}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ stationList-\/>setStyleSheet(QString::fromUtf8(\textcolor{stringliteral}{"{}QListWidget::item\ \{\ background-\/color:\ rgb(26,\ 165,\ 108);\ border-\/radius:\ 5px;\ padding:\ 10px;\ margin-\/bottom:\ 10px;\ \}\(\backslash\)n"{}}}
+\DoxyCodeLine{00088\ \textcolor{stringliteral}{"{}QListWidget::item:selected\ \{\ background-\/color:\ rgb(128,\ 127,\ 129);\ \}"{}}));}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ gridLayout-\/>addWidget(stationList,\ 4,\ 0,\ 1,\ 2);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ lineEdit\_promien\ =\ \textcolor{keyword}{new}\ QLineEdit(centralWidget);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ lineEdit\_promien-\/>setObjectName(\textcolor{stringliteral}{"{}lineEdit\_promien"{}});}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ QSizePolicy\ sizePolicy2(QSizePolicy::Policy::Preferred,\ QSizePolicy::Policy::Preferred);}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ sizePolicy2.setHorizontalStretch(0);}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ sizePolicy2.setVerticalStretch(0);}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ sizePolicy2.setHeightForWidth(lineEdit\_promien-\/>sizePolicy().hasHeightForWidth());}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ lineEdit\_promien-\/>setSizePolicy(sizePolicy2);}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ lineEdit\_promien-\/>setStyleSheet(QString::fromUtf8(\textcolor{stringliteral}{"{}border-\/radius:\ 5px;\ padding\ 5px;"{}}));}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ lineEdit\_promien-\/>setClearButtonEnabled(\textcolor{keyword}{true});}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ gridLayout-\/>addWidget(lineEdit\_promien,\ 2,\ 0,\ 1,\ 1);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ statusLabel\ =\ \textcolor{keyword}{new}\ QLabel(centralWidget);}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ statusLabel-\/>setObjectName(\textcolor{stringliteral}{"{}statusLabel"{}});}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ statusLabel-\/>setEnabled(\textcolor{keyword}{true});}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ statusLabel-\/>setMaximumSize(QSize(327,\ 40));}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ QFont\ font1;}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ font1.setPointSize(12);}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ font1.setKerning(\textcolor{keyword}{false});}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ statusLabel-\/>setFont(font1);}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ statusLabel-\/>setStyleSheet(QString::fromUtf8(\textcolor{stringliteral}{"{}color\ rgb(0,\ 0,\ 0);"{}}));}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ gridLayout-\/>addWidget(statusLabel,\ 3,\ 0,\ 1,\ 1);}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ pushButton\_history\ =\ \textcolor{keyword}{new}\ QPushButton(centralWidget);}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ pushButton\_history-\/>setObjectName(\textcolor{stringliteral}{"{}pushButton\_history"{}});}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ gridLayout-\/>addWidget(pushButton\_history,\ 3,\ 1,\ 1,\ 1);}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window}{MainWindow}}-\/>setCentralWidget(centralWidget);}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ retranslateUi(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ QMetaObject::connectSlotsByName(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00126\ \ \ \ \ \}\ \textcolor{comment}{//\ setupUi}}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{void}\ retranslateUi(QMainWindow\ *\mbox{\hyperlink{class_main_window}{MainWindow}})}
+\DoxyCodeLine{00129\ \ \ \ \ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window}{MainWindow}}-\/>setWindowTitle(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Stacje\ Pomiarowe"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ headerLabel-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Projekt\ Stacje\ Pomiarowe"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ lineEdit\_street\_town-\/>setText(QString());}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ lineEdit\_street\_town-\/>setPlaceholderText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}ulica\ numer,\ Miasto\ lub\ Miasto"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ pushButton\_szukaj-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Szukaj"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ lineEdit\_promien-\/>setPlaceholderText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}promie\(\backslash\)305\(\backslash\)204\ [km]\ (opcjonalnie)"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ statusLabel-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}\(\backslash\)305\(\backslash\)201adowanie\ danych..."{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ pushButton\_history-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}HISTORIA"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00138\ \ \ \ \ \}\ \textcolor{comment}{//\ retranslateUi}}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \};}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \textcolor{keyword}{namespace\ }Ui\ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui_1_1_main_window}{MainWindow}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_ui___main_window}{Ui\_MainWindow}}\ \{\};}
+\DoxyCodeLine{00144\ \}\ \textcolor{comment}{//\ namespace\ Ui}}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ UI\_MAINWINDOW\_H}}
+
+\end{DoxyCode}

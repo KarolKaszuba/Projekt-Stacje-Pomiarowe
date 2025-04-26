@@ -1,0 +1,106 @@
+\doxysection{/\+Users/\+Karol/\+Desktop/studia/sem4/\+JPO\+\_\+\+Projekt/2/\+JPO\+\_\+projekt\+\_\+2/window\+\_\+2\+\_\+data\+\_\+vis.h}
+\hypertarget{window__2__data__vis_8h_source}{}\label{window__2__data__vis_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ WINDOW\_2\_DATA\_VIS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ WINDOW\_2\_DATA\_VIS\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <QDialog>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QNetworkAccessManager>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QNetworkReply>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QCheckBox>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QVBoxLayout>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QCalendarWidget>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QDate>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QMap>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QVector>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QtCharts/QChart>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QtCharts/QChartView>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QtCharts/QLineSeries>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QtCore/qjsonobject.h>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}historymanager.h"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{namespace\ }Ui\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui_1_1window__2__data__vis}{window\_2\_data\_vis}};}
+\DoxyCodeLine{00020\ \}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classwindow__2__data__vis_a52c1dee106bbd397ae02cc75bdf66d7c}{window\_2\_data\_vis}}\ :\ \textcolor{keyword}{public}\ QDialog\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classwindow__2__data__vis_a52c1dee106bbd397ae02cc75bdf66d7c}{window\_2\_data\_vis}}(\textcolor{keywordtype}{int}\ stationId,\ \mbox{\hyperlink{class_history_manager}{HistoryManager}}\ *historyManager,\ \textcolor{keyword}{const}\ QString\ \&sessionId,\ QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{classwindow__2__data__vis_acf1be7fed0a4e0e3b413be539447ffbb}{\string~window\_2\_data\_vis}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ onSensorReply(QNetworkReply\ *reply);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ onMeasurementReply(QNetworkReply\ *reply);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ onAirQualityReply(QNetworkReply\ *reply);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ onDateClicked(\textcolor{keyword}{const}\ QDate\ \&date);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ onChartTypeClicked();}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ onDisplayButtonClicked();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keyword}{struct\ }SensorChartData\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ QString\ sensorName;\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ minValue;\ \ \ \ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ maxValue;\ \ \ \ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ average;\ \ \ \ \ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ QString\ trend;\ \ \ \ \ \ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ QVector<QPointF>\ points;\ }
+\DoxyCodeLine{00093\ \ \ \ \ \};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{bool}\ checkInternetConnection();}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ fetchSensors(\textcolor{keywordtype}{int}\ stationId);}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ fetchMeasurementData(\textcolor{keywordtype}{int}\ sensorId);}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ fetchAirQualityIndex(\textcolor{keywordtype}{int}\ stationId);}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ populateSensors(\textcolor{keyword}{const}\ QJsonArray\ \&sensors);}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{void}\ updateSelectedDatesDisplay();}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{void}\ displayCharts();\textcolor{comment}{//bool\ isLineChart);}}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ displayAirQuality();}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00145\ \ \ \ \ QMap<QDate,\ QMap<QString,\ QMap<int,\ double>>>\ aggregateData();}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{bool}\ isValidSessionId(\textcolor{keyword}{const}\ QString\ \&sessionId)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00157\ \ \ \ \ \mbox{\hyperlink{class_ui_1_1window__2__data__vis}{Ui::window\_2\_data\_vis}}\ *ui;}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00162\ \ \ \ \ QNetworkAccessManager\ *m\_networkManager;}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00167\ \ \ \ \ QVBoxLayout\ *m\_sensorLayout;}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_stationId;}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00177\ \ \ \ \ QList<QDate>\ m\_selectedDates;}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00182\ \ \ \ \ QList<QCheckBox*>\ m\_sensorCheckBoxes;}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00187\ \ \ \ \ QMap<int,\ QString>\ m\_sensorIdToName;}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00192\ \ \ \ \ QMap<int,\ QJsonArray>\ m\_measurementData;}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00197\ \ \ \ \ QJsonObject\ m\_airQualityData;}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00202\ \ \ \ \ QChart\ *m\_chart;}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00207\ \ \ \ \ QChartView\ *m\_chartView;}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00212\ \ \ \ \ \mbox{\hyperlink{class_history_manager}{HistoryManager}}\ *m\_historyManager;}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00217\ \ \ \ \ QString\ m\_sessionId;}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00222\ \ \ \ \ QMap<QDate,\ QMap<QString,\ QMap<int,\ double>>>\ m\_aggregatedData;}
+\DoxyCodeLine{00223\ \};}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00225\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ WINDOW\_2\_DATA\_VIS\_H}}
+
+\end{DoxyCode}
